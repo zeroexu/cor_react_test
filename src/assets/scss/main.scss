@@ -1,0 +1,72 @@
+$color_primary: #02a8e0;
+$color_secondary: #1A031F;
+$color_primary_background: white;
+$color_secondary_background: #eeeeee;
+$color_primary_text: #1A031F;
+$color_secondary_text: #666666;
+
+
+body{
+  ul {
+    list-style-type: none;
+    }
+    color: $color_primary_text;
+    font-family: Roboto;
+    background-color: $color_secondary_background;
+    margin: 0 0;
+   
+    #splash{
+      width: 100%;
+      background-color: $color_secondary;
+      padding-left: 10px;
+      img{
+        width: 100px;
+      }
+    }
+    #container{
+      width: 30%;
+      margin-left:auto;
+      margin-right: auto;
+    
+    #presentation{
+     
+      display:grid;
+      grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
+      input[type=text]{
+        width: 200px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        height: 20px;
+        padding-left: 5px;
+      }
+      #sopa-de-letra{
+        .row-vowel{
+          display:grid;
+          grid-gap: 5px;
+          padding: 5px;
+          grid-template-columns: repeat(auto-fill,minmax(26px, 1fr));
+          cursor: pointer;
+
+          .vowel{
+            display:block;
+            border-radius: 3px;
+            margin-bottom: 0,5em;
+            border: 0.5px dashed $color_primary_text;
+            text-align: center;
+            &:hover{
+              background-color: $color_primary_text;
+              color: $color_primary_background;
+            }
+          }
+        }
+      }
+      
+     
+    }
+  }
+    @media only screen and (max-width: 600px) {
+      #presentation{
+        grid-template-columns: repeat(auto-fill,minmax(100%, 1fr));
+      }
+    }
+}
