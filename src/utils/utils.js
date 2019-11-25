@@ -96,9 +96,7 @@ const diagonalDescString = (matrix) => {
 }
 
 const diagonalAscString = (matrix) => {
-  const words = []
-
-  return words
+  return diagonalDescString(matrix.reverse())
 }
 
 const occurrences = (string, subString, allowOverlapping) => {
